@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTools Universe 2025 - Ultimate Developer & Creator Tools Directory</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Mobile Sidebar Navigation -->
+    <nav class="mobile-sidebar" id="mobile-sidebar">
+        <div class="sidebar-overlay" onclick="closeSidebar()"></div>
+        <div class="sidebar-content">
+            <div class="sidebar-header">
+                <h2>DevTools Universe</h2>
+                <button class="close-sidebar" onclick="closeSidebar()">×</button>
+            </div>
+            <div class="sidebar-nav">
+                <div class="nav-section">
+                    <a href="#home" class="sidebar-link" onclick="navigateAndClose('home')">
+                        <span class="icon">🏠</span>
+                        <div class="link-content">
+                            <span class="link-title">Home</span>
+                            <span class="link-desc">Welcome & Overview</span>
+                        </div>
+                    </a>
+                    <a href="#ai-tools" class="sidebar-link" onclick="navigateAndClose('ai-tools')">
+                        <span class="icon">🤖</span>
+                        <div class="link-content">
+                            <span class="link-title">AI Tools</span>
+                            <span class="link-desc">Artificial Intelligence</span>
+                        </div>
+                    </a>
+                    <a href="#development" class="sidebar-link" onclick="navigateAndClose('development')">
+                        <span class="icon">👨‍💻</span>
+                        <div class="link-content">
+                            <span class="link-title">Development</span>
+                            <span class="link-desc">Web & Software Tools</span>
+                        </div>
+                    </a>
+                    <a href="#design" class="sidebar-link" onclick="navigateAndClose('design')">
+                        <span class="icon">🎨</span>
+                        <div class="link-content">
+                            <span class="link-title">Design Tools</span>
+                            <span class="link-desc">Creative & Visual Tools</span>
+                        </div>
+                    </a>
+                    <a href="#video" class="sidebar-link" onclick="navigateAndClose('video')">
+                        <span class="icon">🎬</span>
+                        <div class="link-content">
+                            <span class="link-title">Video Editing</span>
+                            <span class="link-desc">Editing & Production</span>
+                        </div>
+                    </a>
+                    <a href="#productivity" class="sidebar-link" onclick="navigateAndClose('productivity')">
+                        <span class="icon">⚡</span>
+                        <div class="link-content">
+                            <span class="link-title">Productivity</span>
+                            <span class="link-desc">Workflow & Management</span>
+                        </div>
+                    </a>
+                    <a href="#favorites" class="sidebar-link" onclick="navigateAndClose('favorites')">
+                        <span class="icon">⭐</span>
+                        <div class="link-content">
+                            <span class="link-title">Favorites</span>
+                            <span class="link-desc">Your Saved Tools</span>
+                        </div>
+                    </a>
+                    <a href="#search" class="sidebar-link" onclick="focusSearch()">
+                        <span class="icon">🔍</span>
+                        <div class="link-content">
+                            <span class="link-title">Search</span>
+                            <span class="link-desc">Find Any Tool</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <div class="tool-count">38+ Tools Available</div>
+                <div class="sidebar-version">v2025.1</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Enhanced Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <button class="menu-toggle" id="menu-toggle" onclick="openSidebar()">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <h2>DevTools Universe 2025</h2>
+            </div>
+            <div class="desktop-nav">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#ai-tools" class="nav-link">AI Tools</a>
+                <a href="#development" class="nav-link">Development</a>
+                <a href="#design" class="nav-link">Design</a>
+                <a href="#video" class="nav-link">Video</a>
+                <a href="#productivity" class="nav-link">Productivity</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tool Popup -->
+    <div class="tool-popup hidden" id="tool-popup">
+        <div class="popup-header">
+            <div class="popup-icon"></div>
+            <div class="popup-title"></div>
+            <button class="popup-close" onclick="hideToolPopup()">×</button>
+        </div>
+        <div class="popup-content">
+            <div class="popup-rating"></div>
+            <div class="popup-description"></div>
+            <div class="popup-features"></div>
+            <div class="popup-actions">
+                <a class="popup-visit-btn" target="_blank">Visit Tool</a>
+                <button class="popup-learn-btn" onclick="showToolDetails()">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+                <div class="shape shape-6"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="gradient-text">Ultimate Developer &</span>
+                <span class="gradient-text">Creator Tools Directory</span>
+            </h1>
+            <p class="hero-subtitle">
+                Discover 50+ essential tools for developers, designers, and creators in 2025
+            </p>
+            <div class="stats-preview">
+                <div class="stat-item">
+                    <span class="stat-number" id="ai-count">12</span>
+                    <span class="stat-label">AI Tools</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="dev-count">12</span>
+                    <span class="stat-label">Dev Tools</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="design-count">6</span>
+                    <span class="stat-label">Design Tools</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="video-count">4</span>
+                    <span class="stat-label">Video Tools</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="productivity-count">6</span>
+                    <span class="stat-label">Productivity</span>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <button class="cta-button primary" onclick="scrollToSection('ai-tools')">
+                    Explore AI Tools
+                    <span class="button-arrow">→</span>
+                </button>
+                <button class="cta-button secondary" onclick="scrollToSection('development')">
+                    Development Tools
+                    <span class="button-arrow">→</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Navigation -->
+    <section class="category-nav">
+        <div class="container">
+            <div class="category-grid">
+                <div class="category-card" onclick="scrollToSection('ai-tools')" data-category="ai">
+                    <div class="category-icon">🤖</div>
+                    <h3>AI Tools</h3>
+                    <p>Artificial Intelligence powered tools</p>
+                    <span class="tool-count" id="ai-tool-count">12 tools</span>
+                </div>
+                <div class="category-card" onclick="scrollToSection('development')" data-category="development">
+                    <div class="category-icon">👨‍💻</div>
+                    <h3>Development</h3>
+                    <p>Web and software development tools</p>
+                    <span class="tool-count" id="dev-tool-count">12 tools</span>
+                </div>
+                <div class="category-card" onclick="scrollToSection('design')" data-category="design">
+                    <div class="category-icon">🎨</div>
+                    <h3>Design Tools</h3>
+                    <p>Creative design applications</p>
+                    <span class="tool-count" id="design-tool-count">6 tools</span>
+                </div>
+                <div class="category-card" onclick="scrollToSection('video')" data-category="video">
+                    <div class="category-icon">🎬</div>
+                    <h3>Video Editing</h3>
+                    <p>Video editing and multimedia creation</p>
+                    <span class="tool-count" id="video-tool-count">4 tools</span>
+                </div>
+                <div class="category-card" onclick="scrollToSection('productivity')" data-category="productivity">
+                    <div class="category-icon">⚡</div>
+                    <h3>Productivity</h3>
+                    <p>Workflow and productivity tools</p>
+                    <span class="tool-count" id="productivity-tool-count">6 tools</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Enhanced Global Controls -->
+        <section class="global-controls">
+            <div class="container">
+                <div class="controls-grid">
+                    <div class="search-section">
+                        <div class="search-container">
+                            <input type="text" id="global-search" class="search-input"
+                                placeholder="Search all tools...">
+                            <div class="search-icon">🔍</div>
+                        </div>
+                    </div>
+                    <div class="sort-section">
+                        <select id="sort-select" class="form-control">
+                            <option value="name">Sort by Name</option>
+                            <option value="rating">Sort by Rating</option>
+                            <option value="category">Sort by Category</option>
+                            <option value="pricing">Sort by Pricing</option>
+                        </select>
+                    </div>
+                    <div class="view-controls">
+                        <button class="view-btn active" data-view="grid" title="Grid View">⊞</button>
+                        <button class="view-btn" data-view="list" title="List View">☰</button>
+                        <button class="favorites-btn" id="favorites-toggle" title="Show Favorites">
+                            ♡ <span id="favorites-count">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Tools Section -->
+        <section id="ai-tools" class="tools-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">AI Tools</h2>
+                    <p class="section-description">Artificial Intelligence powered tools for various tasks</p>
+                </div>
+
+                <div class="tools-controls">
+                    <div class="subcategory-filters" id="ai-subcategories">
+                        <button class="filter-btn active" onclick="filterBySubcategory('ai', 'all')">All AI
+                            Tools</button>
+                        <button class="filter-btn" onclick="filterBySubcategory('ai', 'AI Assistant')">AI
+                            Assistant</button>
+                        <button class="filter-btn" onclick="filterBySubcategory('ai', 'Image Generation')">Image
+                            Generation</button>
+                        <button class="filter-btn" onclick="filterBySubcategory('ai', 'Video Generation')">Video
+                            Generation</button>
+                        <button class="filter-btn" onclick="filterBySubcategory('ai', 'Voice & Audio')">Voice &
+                            Audio</button>
+                        <button class="filter-btn" onclick="filterBySubcategory('ai', 'Writing & Content')">Writing &
+                            Content</button>
+                        <button class="filter-btn" onclick="filterBySubcategory('ai', 'Code & Development')">Code &
+                            Development</button>
+                    </div>
+                </div>
+
+                <div class="tools-grid" id="ai-tools-grid">
+                    <!-- AI tool cards will be generated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Development Tools Section -->
+        <section id="development" class="tools-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Development Tools</h2>
+                    <p class="section-description">Tools for web and software development</p>
+                </div>
+
+                <div class="tools-controls">
+                    <div class="subcategory-filters" id="development-subcategories">
+                        <button class="filter-btn active" onclick="filterBySubcategory('development', 'all')">All
+                            Development</button>
+                        <button class="filter-btn"
+                            onclick="filterBySubcategory('development', 'Frontend Framework')">Frontend
+                            Framework</button>
+                        <button class="filter-btn"
+                            onclick="filterBySubcategory('development', 'Backend Framework')">Backend Framework</button>
+                        <button class="filter-btn"
+                            onclick="filterBySubcategory('development', 'Database')">Database</button>
+                        <button class="filter-btn" onclick="filterBySubcategory('development', 'IDE & Editor')">IDE &
+                            Editor</button>
+                        <button class="filter-btn"
+                            onclick="filterBySubcategory('development', 'Version Control')">Version Control</button>
+                        <button class="filter-btn" onclick="filterBySubcategory('development', 'Cloud & Hosting')">Cloud
+                            & Hosting</button>
+                    </div>
+                </div>
+
+                <div class="tools-grid" id="development-tools-grid">
+                    <!-- Development tool cards will be generated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Tools Section -->
+        <section id="design" class="tools-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Design Tools</h2>
+                    <p class="section-description">Creative design and visual editing applications</p>
+                </div>
+
+                <div class="tools-controls">
+                    <div class="subcategory-filters" id="design-subcategories">
+                        <button class="filter-btn active" onclick="filterBySubcategory('design', 'all')">All Design
+                            Tools</button>
+                        <button class="filter-btn" onclick="filterBySubcategory('design', 'UI/UX Design')">UI/UX
+                            Design</button>
+                        <button class="filter-btn" onclick="filterBySubcategory('design', 'Graphic Design')">Graphic
+                            Design</button>
+                        <button class="filter-btn"
+                            onclick="filterBySubcategory('design', 'Prototyping')">Prototyping</button>
+                    </div>
+                </div>
+
+                <div class="tools-grid" id="design-tools-grid">
+                    <!-- Design tool cards will be generated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Editing Section -->
+        <section id="video" class="tools-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Video Editing Tools</h2>
+                    <p class="section-description">Video editing and multimedia creation tools</p>
+                </div>
+
+                <div class="tools-controls">
+                    <div class="subcategory-filters" id="video-subcategories">
+                        <button class="filter-btn active" onclick="filterBySubcategory('video', 'all')">All Video
+                            Tools</button>
+                        <button class="filter-btn"
+                            onclick="filterBySubcategory('video', 'Professional')">Professional</button>
+                        <button class="filter-btn"
+                            onclick="filterBySubcategory('video', 'Beginner-Friendly')">Beginner-Friendly</button>
+                    </div>
+                </div>
+
+                <div class="tools-grid" id="video-tools-grid">
+                    <!-- Video tool cards will be generated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Productivity Tools Section -->
+        <section id="productivity" class="tools-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Productivity Tools</h2>
+                    <p class="section-description">Tools to enhance workflow and productivity</p>
+                </div>
+
+                <div class="tools-controls">
+                    <div class="subcategory-filters" id="productivity-subcategories">
+                        <button class="filter-btn active" onclick="filterBySubcategory('productivity', 'all')">All
+                            Productivity</button>
+                        <button class="filter-btn"
+                            onclick="filterBySubcategory('productivity', 'Note-taking')">Note-taking</button>
+                        <button class="filter-btn"
+                            onclick="filterBySubcategory('productivity', 'Communication')">Communication</button>
+                        <button class="filter-btn"
+                            onclick="filterBySubcategory('productivity', 'Project Management')">Project
+                            Management</button>
+                    </div>
+                </div>
+
+                <div class="tools-grid" id="productivity-tools-grid">
+                    <!-- Productivity tool cards will be generated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Tool Details Modal -->
+    <div class="modal hidden" id="details-modal">
+        <div class="modal-overlay" onclick="closeModal('details-modal')"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="details-title">Tool Details</h3>
+                <button class="modal-close" onclick="closeModal('details-modal')">×</button>
+            </div>
+            <div class="modal-body" id="details-content">
+                <!-- Tool details content will be generated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <span>↑</span>
+    </button>
+
+    <!-- Floating Action Buttons -->
+    <div class="fab-container">
+        <button class="fab main-fab" id="main-fab">+</button>
+        <button class="fab sub-fab" id="export-fab" title="Export Favorites">📥</button>
+        <button class="fab sub-fab" id="share-fab" title="Share Collection">🔗</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DevTools Universe 2025</h3>
+                    <p>Your ultimate directory for developer and creator tools. Discover, compare, and find the perfect
+                        tools for your workflow.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank">GitHub</a>
+                        <a href="#" target="_blank">Twitter</a>
+                        <a href="#" target="_blank">Discord</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <a href="#ai-tools">AI Tools</a>
+                    <a href="#development">Development</a>
+                    <a href="#design">Design Tools</a>
+                    <a href="#video">Video Editing</a>
+                    <a href="#productivity">Productivity</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Popular Tools</h4>
+                    <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
+                    <a href="https://www.figma.com" target="_blank">Figma</a>
+                    <a href="https://code.visualstudio.com" target="_blank">VS Code</a>
+                    <a href="https://github.com" target="_blank">GitHub</a>
+                    <a href="https://www.notion.so" target="_blank">Notion</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <a href="#">Submit a Tool</a>
+                    <a href="#">Tool Categories</a>
+                    <a href="#">Featured Collections</a>
+                    <a href="#">Developer Blog</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DevTools Universe. All rights reserved. | Made by SHAN for developers and creators</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
